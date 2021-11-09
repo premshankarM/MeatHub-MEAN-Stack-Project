@@ -1,0 +1,43 @@
+<section class="add-to-cart mt-2">
+    <div class="container">
+     <div class="row">
+      <div class="col-12 col xl-12 col-lg-12 col-md-12">
+        <div clas="card shadow-sm">
+          <div class="card-header border-0  pt-5 pb-0" style="background-color: white;">
+            <h2 class="pl-2 text-capitalize">{{subcat?.sub_cat_name}}</h2>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-12 col-md-4 col-sm-4 col-lg-4">
+                <img  src="assets/imgs/mutton2.jpg" width="100%">
+                <p class="pt-3">{{subcat?.sub_cat_desc}}</p>
+              </div>
+              <div class="col-12 col-md-8 col-sm-8 col-lg-8">
+                <form [formGroup]="formGroup" (ngSubmit)="addToCart()">
+                <div class="form-group">
+                  <label for="weight">Weight</label>
+                  <select formControlName="weight" class="form-control">
+                    <option value="default" disabled selected>Select a Weight</option>
+                    <option *ngFor="let i of [0.5,1,1.5,2,2.5,3,3.5,4,4.5,5,5.5,6,6.6,7,7.5,8,8.5,9,9.5,10]" value="{{i}}">{{i}} kg</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="cut">Cut</label>
+                  <select formControlName="cut" class="form-control">
+                   <option value="default" disabled selected>Select the type of Cut</option>
+                    <option  value="Small_Cut">Small Cut</option>
+                    <option value="MediUm_Cut">medium cut</option>
+                    <option value="Large_Cut">large-cut</option>
+                  </select>
+                </div>
+                <a class="btn btn-primary text-light" (click)="back()">Back</a>
+                <button matRipple class="btn btn-outline-primary ml-2"  type="submit">Add to Cart</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+     </div>
+   </div>
+</section>

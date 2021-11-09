@@ -1,0 +1,32 @@
+<section class="cat-result container">
+    <h1 class="text-center py-4 text-capitalize">{{cat_name}}
+    </h1>
+    <!-- <div class="row">
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4 mt-3" *ngFor="let i of subcats" >
+        <div class="card" >
+          <img src="assets/imgs/chicken3.jpg" style=" height:250px;width:100%">
+          <div id="dum" style="display:flex;justify-content: space-between;padding-top: 1rem">
+          <h5 class="pl-2">{{i.sub_cat_name}}</h5> 
+          <span class="price pr-2" style="
+            display: flex;align-items: center;justify-content: center;
+        ">Rs {{i.rate_per_kg}}/-</span>
+        </div>
+          <a class="btn" routerLink='/cart/add/{{i.id}}'>Add to Cart</a>
+        </div>
+      </div>
+      </div> -->
+      <div class="row">
+        <div class="col-12 col-sm-4 col-md-4 col-lg-4 mt-3 mb-3" *ngFor="let i of subcats" >
+          <mat-card class="example-card">
+            <mat-card-header style="color:black">
+              <mat-card-title>{{i.sub_cat_name}}</mat-card-title>
+              <mat-card-subtitle style="color:black">Rs {{i.rate_per_kg}} /- per Kg</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image height="200px" src="{{i.sub_cat_image}}">
+            <mat-card-actions style="color:black">
+              <a routerLink='/cart/add/{{i.id}}' class="btn btn-primary"> <i class="fas fa-cart-plus"></i> Add to Cart </a>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+        </div>
+  </section>

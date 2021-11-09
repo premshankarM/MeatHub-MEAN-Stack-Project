@@ -1,0 +1,66 @@
+<section class="order-history">
+  <h3 class="text-center pt-4">Order History</h3>
+    <div *ngIf="orderLength" class="container d-flex flex-column justify-content-center align-items-center" style="min-height: 500px;">
+     
+      <p class="d-block"><i class="fas fa-exclamation-triangle"></i> No Orders Yet</p>
+        <button onclick="location.href='./categories.html'" type="submit" class="btn btn-primary">Order Now!</button>
+    </div>    
+    <div class="container" *ngIf="!orderLength">
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 py-4">
+          <mat-accordion >
+            <mat-expansion-panel style="background-color:white; color: black;margin-bottom: 1rem;" *ngFor="let i of orders">
+              <mat-expansion-panel-header style="height: auto !important;">
+                <div class="row">
+                  <div class="col-12 col-lg-4 col-md-4 col-sm-4">
+                    <h6>Order Id:</h6>
+                    <p>{{i?.order_unique_id}}</p>
+                  </div>
+                  <div class="col-12 col-lg-3 col-md-3 col-sm-3  status">
+                    <h6>Order Status:</h6>
+                    <p class="text-center" class="badge text-light" [class.badge-primary]="i?.order_status=='pending'" [class.badge-success]="i?.order_status=='completed'" [class.badge-warning]="i?.order_status=='created'" >{{i?.order_status}}</p>
+                  </div>
+                  <div class="col-12 col-lg-3 col-md-3 col-sm-3  status">
+                    <h6>Order Created On:</h6>
+                    <p class="text-center" class="badge">{{i?.createdAt}}</p>
+                  </div>
+                  <div class="col-12 col-lg-2 col-md-2 col-sm-2 status">
+                    <h6>Order Amount</h6>
+                    <h6>Rs: {{i?.order_amount}} /-</h6>
+                  </div>
+                </div>
+                
+              </mat-expansion-panel-header>
+              <div class="container">
+                <hr>
+                <div class="row">
+                <div class="col-12 col-lg-6 col-md-6 col-sm-6">
+                  <h6>Order Data</h6>
+                  <div class="card" style="width: 90%;" *ngFor="let j of i.order_data">
+                     <div class="card-body">
+                  <p class="text-xs"><b>Item</b>:&nbsp;{{j.name}},{{j.cut}}</p>
+                  <p class="text-xs"><b>Rate per kg:</b>  Rs {{j.rate_per_kg}} /-</p>
+                  <p class="text-xs"><b>Weight:</b>  {{j.weight}} kg</p>
+                  </div>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-6 col-md-6 col-sm-6">
+                  <h6>Delivery Details</h6>
+                  <div class="card" style="width: 90%;">
+                    <div class="card-body">
+                 <p class="text-xs"><b>Name :</b>:&nbsp;{{i.delivery_address.name}}</p>
+                 <p class="text-xs"><b>Email :</b> {{i.delivery_address.email}} /-</p>
+                 <p class="text-xs"><b>Mobile:</b>  {{i.delivery_address.mobile}}, {{i.delivery_address.mobile_alt}}</p>
+                 <p class="text-xs"><b>Address:</b>  {{i.delivery_address.address}} kg</p>
+                 <p class="text-xs"><b>Date And time:</b>  {{i.delivery_address.date}}, {{i.delivery_address.time}}</p>
+                 </div>
+                 </div>
+                </div>
+              </div>
+            </div>
+            </mat-expansion-panel>
+          </mat-accordion>
+        </div>
+      </div>
+    </div>
+  </section>

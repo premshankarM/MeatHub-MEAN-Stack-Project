@@ -1,0 +1,58 @@
+.navbar-brand img{
+    object-fit: contain;
+}
+
+.navbar-toggler-icon {
+    color:black  !important;
+  }
+.nav-item a{
+    //   font-weight: bold;
+      font-size: 0.9rem;
+      color:black;
+      padding: 0 !important;
+      text-shadow: 0 0 1px rgb(114, 111, 111);
+
+}
+.nav-item a:hover{
+    border-bottom:solid 2px black;
+    text-shadow: 0 0 1.5px rgb(114, 111, 111);
+
+}
+li.nav-item{
+      padding: 0 1rem;
+      padding-bottom: 0 !important;
+  }
+a.active{
+      border-bottom:solid 2px red;
+  }
+  nav{
+    height: 80px;
+    background-color: white;
+  }
+  header{
+    box-shadow: 0 0 5px rgba(0,0,0,0.2)
+  }
+  ::ng-deep .mat-menu-panel {
+     background:white; 
+     color: black;
+}
+::ng-deep .mat-menu-panel {
+    background:white; 
+    color: black;
+}
+a:hover {
+    color: black;
+    text-decoration: underline;
+    text-decoration: none;
+}
+a{
+    color: black;
+    text-decoration: underline;
+    text-decoration: none;
+}
+::ng-deep .mat-menu-item:hover {
+    color: black;
+    text-decoration: underline;
+    text-decoration: none;
+    background-color: rgb(114, 111, 111);
+}

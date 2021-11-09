@@ -1,0 +1,29 @@
+<section class="profile mt-5">
+    <div class="container">
+    <div class="row justify-content-center">
+    <div class="col-12 col-md-6 col-sm-6 col-lg-6 justify-content-center align-items-center">
+      <h1 class="text-center text-dark">{{adds_id?"Edit Address":"Add a New Address"}}</h1>
+      <form [formGroup]="formGroup" (ngSubmit)="address()">
+        <div class="form-group">
+          <label for="addressName">Give the Address nameName:</label>
+          <input type="text" formControlName="addr_name" class="form-control" placeholder="Address Name">
+          <small class="error" *ngIf="p.addr_name.errors && (p.addr_name.dirty || p.addr_name.touched)" >Sorry we currently dont have service in this area</small>
+        </div>
+        <div class="form-group">
+          <label for="houseInfo">House/App/flat Name/Number:</label>
+          <input type="text" formControlName="house_flat_no" class="form-control" placeholder="Please enter House/appt number">
+        </div>
+        <div class="form-group">
+          <label for="area">Area/Locality:</label>
+          <input type="text"  formControlName="area_locality" class="form-control">
+          </div>
+        <div class="form-group">
+          <label for="landmark">Nearby Landmark:</label>
+          <input type="text" formControlName="landmark" class="form-control" placeholder="Nearby Landmark">
+        </div>
+        <button type="submit" class="btn btn-primary ml-1">{{adds_id?"Edit Address":"Add Address"}}</button>
+      </form>
+    </div>
+    </div>
+    </div>
+    </section>

@@ -1,0 +1,30 @@
+.cat-result .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: auto;
+    max-width: 300px;
+    text-align: center;
+    font-family: arial;
+  }
+  .card-img-overlay {
+    background-color: rgba(red, 0.9);
+  }
+  .cat-result .price {
+    color: grey;
+    font-size: 22px;
+  }
+  a{
+    text-decoration: none;
+  }
+  .example-card {
+    max-width: 400px;
+  }
+  .example-card{
+    background-color: white !important;
+  }
+  ::ng-deep .mat-card-header-text {
+    /* margin: 0 16px; */
+    margin: 0 0 !important;
+}
+mat-card-title{
+  text-transform: capitalize;
+}

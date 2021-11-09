@@ -1,0 +1,22 @@
+::ng-deep .mat-step-header .mat-step-icon {
+    background-color: #c2185b;
+    color: #fff;
+}
+
+table{
+    border: solid 1px #dedede;
+    th,td{
+        border: solid 1px #dedede;
+    }
+}
+.empty{
+    height:80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    i{
+        font-size:4rem;
+        margin-bottom: 1rem;
+    }
+}

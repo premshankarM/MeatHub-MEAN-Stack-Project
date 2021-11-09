@@ -1,0 +1,16 @@
+.mat-expansion-panel-header{
+    height: auto !important;
+    .row{
+        width: 100%;
+        padding: 20px 0; 
+    }
+    .amount{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+}
+
+::ng-deep .mat-expansion-indicator::after, .mat-expansion-panel-header-description{
+    color:black !important;
+}

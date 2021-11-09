@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Cookie|Lobster|Satisfy&display=swap');
+img {
+    height: 550px;
+    object-fit: cover;
+}
+.caption{
+    height:550px;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color:rgba(0,0,0,0.6);
+    .display1{
+        font-family: Cookie !important;
+        font-size: 60px;
+        font-weight: bolder;
+        color:#fc0007;
+    }
+    .display2{
+        font-size: 70px;
+        color: white;
+    }
+}
+::ng-deep .owl-carousel .owl-nav .owl-prev{
+    position: absolute !important;
+    top: 35% !important;
+    left: 10px !important;
+    font-size: 2.5rem !important;
+    background-color:transparent !important;
+}
+::ng-deep .owl-carousel .owl-nav .owl-next{
+    position: absolute !important;
+    top: 35% !important;
+    right: 10px !important;
+    font-size: 2.5rem !important;
+    background-color:transparent !important;
+}
+::ng-deep .owl-theme .owl-dots{
+    position: absolute !important;
+    top: 95% !important;
+    left: 47% !important;
+}

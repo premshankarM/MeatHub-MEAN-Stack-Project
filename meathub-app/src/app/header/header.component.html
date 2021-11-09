@@ -1,0 +1,42 @@
+<header class="shadow-sm">
+    <nav class="navbar navbar-expand-md">
+        <a class="navbar-brand ml-5" href="#"><img width="150" height="50"  src="assets/imgs/MHUBPNG.png"> </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav m-auto justify-content-end" style="display: flex;align-items: center;">
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/" routerLinkActive="active">Home</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" routerLink="/categories" routerLinkActive="active">Order Now</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/about" routerLinkActive="active">About</a>
+            </li>   
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/contact" routerLinkActive="active">Contact us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="auth/login" *ngIf="!isLoggedIn" routerLinkActive="active">Login/Register:</a>
+              <div *ngIf="isLoggedIn">
+                <button mat-button [matMenuTriggerFor]="menu" style="background:black;color: white;">Menu</button>
+                <mat-menu #menu="matMenu" style="background:white;color: black;">
+                  <a mat-menu-item routerLink="user/profile">Profile</a>
+                  <a mat-menu-item routerLink="user/address">Address Book</a>
+                  <a mat-menu-item routerLink="user/order/history">Order History</a>
+                  <a mat-menu-item routerLink="" (click)=logout()>Logout</a>
+                </mat-menu>
+              </div>
+            </li>
+            <li class="mr-5" *ngIf="isLoggedIn">
+              <a routerLink="/cart">
+                <i class="fas fa-shopping-cart" style="font-size: 30px;"></i>
+              <span class='badge badge-warning' id='lblCartCount'>{{cart_count}}</span>
+              </a>
+            </li>  
+          </ul>
+        </div>  
+      </nav>
+   </header>

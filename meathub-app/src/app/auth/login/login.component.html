@@ -1,0 +1,32 @@
+<section id="sec5">
+    <div class="container mt-3">
+      <div class="row flex-column align-items-center">
+        <div class="col-12 col-sm-4 col-md-4 col-lg-4">
+          <div class="card">
+          <div class="card-header">Login</div>
+          <form [formGroup]=formGroup (ngSubmit)="login()">
+          <div class="card-body"> 
+           <div class="form-group">
+             <input type="text" placeholder="Registered Mobile Number" formControlName="mobile" class="form-control">
+             <p class="error" *ngIf="p.mobile.errors && (p.mobile.dirty || p.mobile.touched)" >Please enter valid mobile number</p> 
+           </div>
+           <div class="form-group">
+            <input type="password" placeholder="Password" formControlName="password" class="form-control">
+          </div>
+           <div class="form-check">
+             <label class="form-check-label">
+               <input type="checkbox" formControlName="checkbox" class="form-check-input">By signing/registering in, you agree to Meathub
+               <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a>
+             </label>
+           </div>
+         </div>
+         <div class="card-footer">
+           <button class="btn btn-primary text-light"  type="submit">Sign In</button>
+         </div>
+        </form>
+        <p class="p-3">If you dont have an account please <a routerLink="/auth/register">register Here</a></p>
+         </div>
+        </div>
+      </div>
+    </div>
+  </section>

@@ -1,0 +1,28 @@
+.section1{
+      #outer{
+        width:100%;
+        height:200px;
+        background: url("../../assets/imgs/meat-2758553_1280.jpg") no-repeat center center;
+        background-size: cover;
+        margin: 0;
+        }
+    
+        #inner{
+          color:white;
+          width:100%;
+          height:100%;
+          background:rgba(0,0,0,0.7);
+          display:flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          font-weight: bolder;
+          }
+          a{
+            text-decoration: none;
+          }
+          h2{
+              font-family: Cookie !important;
+          }
+      }
+  
